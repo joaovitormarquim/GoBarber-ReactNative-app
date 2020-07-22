@@ -8,7 +8,7 @@ interface InputProps extends TextInputProps {
   icon: string;
 }
 
-const Input: React.FC<InputProps> = ({ name, icon, ...rest }) => (
+const Input: React.FC<InputProps> = ({ icon, ...rest }) => (
   <Container>
     <Icon name={icon} size={20} color="#666360" />
     <TextInput
