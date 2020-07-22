@@ -18,7 +18,6 @@ import {
   ForgotPasswordText,
   CreateAccountButton,
   CreateAccountButtonText,
-  CreateAccountButtonContent,
 } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -58,10 +57,8 @@ const SignIn: React.FC = () => {
           console.log('funcionando');
         }}
       >
-        <CreateAccountButtonContent>
-          <Icon name="log-in" size={20} color="#ff9000" />
-          <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
-        </CreateAccountButtonContent>
+        <Icon name="log-in" size={20} color="#ff9000" />
+        <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
       </CreateAccountButton>
     </>
   );
