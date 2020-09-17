@@ -46,6 +46,7 @@ export const AuthProvider: React.FC = ({ children }) => {
       ]);
 
       if (token && user) {
+        api.defaults.headers.authorization = `Bearer ${token}`;
         setData({ token: token, user: JSON.parse(user) });
       }
 
@@ -62,6 +63,8 @@ export const AuthProvider: React.FC = ({ children }) => {
     });
 
     const { token, user } = response.data;
+
+    api.defaults.headers.authorization = `Bearer ${token}`;
 
     await AsyncStorage.multiSet([
       ['@GoBarber:token', token],
